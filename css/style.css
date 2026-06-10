@@ -1,0 +1,146 @@
+:root {
+    --primary: #171c1e;
+    --secondary: #3c3e3c;
+    --accent: #ea6719;
+    --accent-light: #f5a942;
+    --text: #eadac3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--primary);
+    color: var(--text);
+    font-family: "Gothic A1", sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.5rem 5%;
+    background: rgba(23, 28, 30, 0.9);
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.55)
+        ),
+        url("../assets/images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-family: "Lexend", sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+
+    background: var(--accent);
+
+    color: white;
+    text-decoration: none;
+
+    padding: 14px 28px;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--accent-light);
+}
+
+.intro,
+.services,
+.contact {
+    padding: 100px 10%;
+}
+
+.intro h2,
+.services h2,
+.contact h2 {
+    margin-bottom: 1rem;
+    color: var(--accent-light);
+}
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+}
