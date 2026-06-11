@@ -197,6 +197,10 @@ footer {
     background: var(--primary);
 }
 
+.packages {
+    scroll-margin-top: 120px;
+}
+
 .packages h2 {
     text-align: center;
     margin-bottom: 4rem;
