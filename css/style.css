@@ -114,6 +114,8 @@ body {
     font-family: "Lexend", sans-serif;
     font-size: 1.3rem;
     margin-bottom: 2rem;
+
+    max-width: 700px;
 }
 
 .cta-button {
