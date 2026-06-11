@@ -32,8 +32,17 @@ body {
     background: rgba(23, 28, 30, 0.9);
 
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+
     z-index: 1000;
+
+    transition: transform 0.35s ease;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
 }
 
 .logo img {
