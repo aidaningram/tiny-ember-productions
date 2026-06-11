@@ -192,13 +192,9 @@ footer {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
     background: var(--primary);
-}
-
-.packages {
-    scroll-margin-top: 120px;
 }
 
 .packages h2 {
