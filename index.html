@@ -191,23 +191,48 @@
     <section id="contact" class="contact">
 
         <h2>Get In Touch</h2>
-
-        <div class="contact-info">
-
-            <p><strong>Phone:</strong> (854) 210-8998</p>
-
-            <p><strong>Email:</strong> aidaningram.video@gmail.com</p>
-
-            <p><strong>Instagram:</strong> @tinyemberproductions</p>
-
-        </div>
-
+    
+        <p class="contact-intro">
+            Ready to start a project? Fill out the form below and I’ll get back to you soon.
+        </p>
+    
+        <form class="contact-form" action="https://formspree.io/f/mpqejgzk" method="POST">
+    
+            <div class="form-row">
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+            </div>
+    
+            <input type="email" name="email" placeholder="Email Address" required>
+    
+            <select name="package-interest" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Standard Short-Form Content">Standard Short-Form Content</option>
+                <option value="Standard Video Production">Standard Video Production</option>
+                <option value="All Inclusive Package">All Inclusive Package</option>
+            </select>
+    
+            <textarea 
+                name="message" 
+                placeholder="What's your project vision? Do you have any specific requirements? What questions do you have?"
+                required></textarea>
+    
+            <button type="submit" class="form-button">Send Message</button>
+    
+        </form>
+    
     </section>
 
-    <footer>
+    <footer class="site-footer">
 
         <p>© 2026 Tiny Ember Productions</p>
-
+    
+        <div class="footer-contact">
+            <span>(854) 210-8998</span>
+            <span>aidaningram.video@gmail.com</span>
+            <span>@tinyemberproductions</span>
+        </div>
+    
     </footer>
 
     <script src="js/main.js"></script>
