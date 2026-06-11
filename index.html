@@ -205,15 +205,33 @@
     
             <input type="email" name="email" placeholder="Email Address" required>
     
-            <select name="package-interest" required>
+            <label for="package-interest" class="form-label">
+                Package Preference
+            </label>
+            
+            <select id="package-interest" name="package-interest" required>
                 <option value="" disabled selected>Select an option</option>
-                <option value="Standard Short-Form Content">Standard Short-Form Content</option>
-                <option value="Standard Video Production">Standard Video Production</option>
-                <option value="All Inclusive Package">All Inclusive Package</option>
+            
+                <option value="Standard Short-Form Content">
+                    Standard Short-Form Content
+                </option>
+            
+                <option value="Standard Video Production">
+                    Standard Video Production
+                </option>
+            
+                <option value="All Inclusive Package">
+                    All Inclusive Package
+                </option>
             </select>
-    
-            <textarea 
-                name="message" 
+            
+            <label for="message" class="form-label">
+                Additional Message
+            </label>
+            
+            <textarea
+                id="message"
+                name="message"
                 placeholder="What's your project vision? Do you have any specific requirements? What questions do you have?"
                 required></textarea>
     
