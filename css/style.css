@@ -33,26 +33,19 @@ body {
     display: flex;
     justify-content: center;
 
-    padding: 0;
-
-    background: rgba(23, 28, 30, 0.9);
+    background: rgba(23, 28, 30, 0.96);
 
     z-index: 1000;
 
     transition:
-        top 0.7s ease,
-        left 0.7s ease,
-        width 0.7s ease,
-        max-width 0.7s ease,
-        transform 0.7s ease,
-        background 0.7s ease,
-        border-radius 0.7s ease,
-        padding 0.7s ease;
+        top 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        padding 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-inner {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
 
     display: flex;
     align-items: center;
@@ -60,36 +53,13 @@ body {
 
     padding: 1.5rem 5%;
 
+    border-radius: 0;
+
     transition:
-        width 0.7s ease,
-        padding 0.7s ease,
-        gap 0.7s ease,
-        justify-content 0.7s ease;
-}
-
-.navbar.compact {
-    top: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 760px;
-    max-width: 88%;
-
-    background: rgba(23, 28, 30, 0.98);
-
-    border-radius: 999px;
-
-    padding: 0;
-}
-
-.navbar.compact .nav-inner {
-    width: 100%;
-
-    justify-content: space-around;
-
-    gap: 2rem;
-
-    padding: 1.1rem 3.5rem;
+        max-width 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        padding 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        border-radius 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .logo img {
@@ -97,7 +67,7 @@ body {
     display: block;
 
     transition:
-        height 0.6s ease,
+        height 0.75s cubic-bezier(0.22, 1, 0.36, 1),
         transform 0.3s ease;
 }
 
@@ -105,20 +75,14 @@ body {
     transform: scale(1.05);
 }
 
-.navbar.compact .logo img {
-    height: 56px;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
 
-    transition: gap 0.6s ease;
-}
+    gap: clamp(1.5rem, 4vw, 3rem);
 
-.navbar.compact .nav-links {
-    gap: 1.8rem;
+    transition:
+        gap 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-links a {
@@ -129,15 +93,36 @@ body {
 
     transition:
         color 0.3s ease,
-        font-size 0.6s ease;
-}
-
-.navbar.compact .nav-links a {
-    font-size: 1rem;
+        font-size 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-links a:hover {
     color: var(--accent);
+}
+
+/* Compact Dynamic Island State */
+.navbar.compact {
+    top: 24px;
+
+    background: transparent;
+}
+
+.navbar.compact .nav-inner {
+    max-width: 900px;
+
+    padding: 1.15rem 3.5rem;
+
+    border-radius: 999px;
+
+    background: rgba(23, 28, 30, 0.98);
+}
+
+.navbar.compact .logo img {
+    height: 56px;
+}
+
+.navbar.compact .nav-links {
+    gap: 2.4rem;
 }
 
 .hero {
