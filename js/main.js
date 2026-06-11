@@ -2,8 +2,13 @@ const navbar = document.querySelector(".navbar");
 const navInner = document.querySelector(".nav-inner");
 const logoImg = document.querySelector(".logo img");
 const navLinks = document.querySelector(".nav-links");
+const menuToggle = document.querySelector(".menu-toggle");
 
 window.addEventListener("scroll", () => {
+
+    // Only run desktop navbar animation
+    if (window.innerWidth <= 768) return;
+
     const scrollStart = 0;
     const scrollEnd = window.innerHeight * 0.75;
 
@@ -25,19 +30,20 @@ window.addEventListener("scroll", () => {
     navLinks.style.gap = `${2 + eased * 0.4}rem`;
 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
 if (menuToggle && navLinks) {
+
     menuToggle.addEventListener("click", () => {
         menuToggle.classList.toggle("active");
         navLinks.classList.toggle("active");
     });
 
     navLinks.querySelectorAll("a").forEach((link) => {
+
         link.addEventListener("click", () => {
             menuToggle.classList.remove("active");
             navLinks.classList.remove("active");
         });
+
     });
+
 }
