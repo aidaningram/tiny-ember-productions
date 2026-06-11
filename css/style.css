@@ -421,6 +421,14 @@ footer {
     background: var(--accent-light);
 }
 
+.form-status {
+    text-align: center;
+    margin-top: 1rem;
+
+    font-family: "Lexend", sans-serif;
+    color: var(--accent-light);
+}
+
 .site-footer {
     display: flex;
     justify-content: space-between;
