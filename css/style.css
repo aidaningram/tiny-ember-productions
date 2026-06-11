@@ -25,7 +25,7 @@ body {
 
 .navbar {
     position: fixed;
-    top: 24px;
+    top: 0;
     left: 0;
 
     width: 100%;
@@ -33,53 +33,70 @@ body {
     display: flex;
     justify-content: center;
 
+    padding: 0;
+
+    background: rgba(23, 28, 30, 0.9);
+
     z-index: 1000;
 
-    pointer-events: none;
+    transition:
+        top 0.6s ease,
+        width 0.6s ease,
+        background 0.6s ease,
+        border-radius 0.6s ease,
+        padding 0.6s ease;
 }
 
 .nav-inner {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: none;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 1.2rem 2rem;
-
-    background: rgba(23, 28, 30, 0.9);
-    border-radius: 0;
+    padding: 1.5rem 5%;
 
     transition:
-        width 0.45s ease,
-        padding 0.45s ease,
-        border-radius 0.45s ease,
-        background 0.45s ease,
-        transform 0.45s ease;
-
-    pointer-events: auto;
+        width 0.6s ease,
+        max-width 0.6s ease,
+        padding 0.6s ease,
+        gap 0.6s ease;
 }
 
-.navbar.compact .nav-inner {
-    width: fit-content;
+/* Shrunken dynamic-island navbar */
+.navbar.compact {
+    top: 24px;
 
-    padding: 0.75rem 1.4rem;
+    width: auto;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgba(23, 28, 30, 0.94);
 
     border-radius: 999px;
 
-    background: rgba(23, 28, 30, 0.92);
+    padding: 0;
+}
 
-    gap: 1.5rem;
+.navbar.compact .nav-inner {
+    width: auto;
+    max-width: none;
+
+    justify-content: center;
+
+    gap: 2.5rem;
+
+    padding: 1.1rem 2.5rem;
 }
 
 .logo img {
     height: 70px;
-
     display: block;
 
     transition:
-        height 0.45s ease,
+        height 0.6s ease,
         transform 0.3s ease;
 }
 
@@ -88,7 +105,7 @@ body {
 }
 
 .navbar.compact .logo img {
-    height: 42px;
+    height: 56px;
 }
 
 .nav-links {
@@ -96,17 +113,26 @@ body {
     list-style: none;
     gap: 2rem;
 
-    transition: gap 0.45s ease;
+    transition: gap 0.6s ease;
 }
 
 .navbar.compact .nav-links {
-    gap: 1.2rem;
+    gap: 1.8rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text);
-    transition: 0.3s;
+
+    font-size: 1rem;
+
+    transition:
+        color 0.3s ease,
+        font-size 0.6s ease;
+}
+
+.navbar.compact .nav-links a {
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
