@@ -303,6 +303,10 @@ footer {
     font-weight: 600;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 /* Phone layout */
 @media (max-width: 768px) {
 
