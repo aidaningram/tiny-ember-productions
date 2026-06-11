@@ -40,11 +40,14 @@ body {
     z-index: 1000;
 
     transition:
-        top 0.6s ease,
-        width 0.6s ease,
-        background 0.6s ease,
-        border-radius 0.6s ease,
-        padding 0.6s ease;
+        top 0.7s ease,
+        left 0.7s ease,
+        width 0.7s ease,
+        max-width 0.7s ease,
+        transform 0.7s ease,
+        background 0.7s ease,
+        border-radius 0.7s ease,
+        padding 0.7s ease;
 }
 
 .nav-inner {
@@ -58,22 +61,21 @@ body {
     padding: 1.5rem 5%;
 
     transition:
-        width 0.6s ease,
-        max-width 0.6s ease,
-        padding 0.6s ease,
-        gap 0.6s ease;
+        width 0.7s ease,
+        padding 0.7s ease,
+        gap 0.7s ease,
+        justify-content 0.7s ease;
 }
 
-/* Shrunken dynamic-island navbar */
 .navbar.compact {
     top: 24px;
-
-    width: auto;
-
     left: 50%;
     transform: translateX(-50%);
 
-    background: rgba(23, 28, 30, 0.94);
+    width: 760px;
+    max-width: 88%;
+
+    background: rgba(23, 28, 30, 0.98);
 
     border-radius: 999px;
 
@@ -81,14 +83,13 @@ body {
 }
 
 .navbar.compact .nav-inner {
-    width: auto;
-    max-width: none;
+    width: 100%;
 
-    justify-content: center;
+    justify-content: space-around;
 
-    gap: 2.5rem;
+    gap: 2rem;
 
-    padding: 1.1rem 2.5rem;
+    padding: 1.1rem 3.5rem;
 }
 
 .logo img {
