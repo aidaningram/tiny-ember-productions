@@ -52,3 +52,35 @@ if (menuToggle && navLinks) {
 }
 
 updateNavbar();
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm && formStatus) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        formStatus.textContent = "Sending...";
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                formStatus.textContent = "Thanks! Your message has been sent.";
+                contactForm.reset();
+            } else {
+                formStatus.textContent = "Something went wrong. Please try again.";
+            }
+        } catch (error) {
+            formStatus.textContent = "Something went wrong. Please try again.";
+        }
+    });
+}
