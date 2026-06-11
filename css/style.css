@@ -36,11 +36,6 @@ body {
     background: rgba(23, 28, 30, 0.96);
 
     z-index: 1000;
-
-    transition:
-        top 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-        padding 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-        background 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-inner {
@@ -53,22 +48,15 @@ body {
 
     padding: 1.5rem 5%;
 
+    background: transparent;
     border-radius: 0;
-
-    transition:
-        max-width 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-        padding 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-        border-radius 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-        background 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .logo img {
     height: 70px;
     display: block;
 
-    transition:
-        height 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .logo img:hover {
@@ -78,51 +66,19 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-
-    gap: clamp(1.5rem, 4vw, 3rem);
-
-    transition:
-        gap 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    gap: 2rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text);
-
     font-size: 1rem;
 
-    transition:
-        color 0.3s ease,
-        font-size 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: var(--accent);
-}
-
-/* Compact Dynamic Island State */
-.navbar.compact {
-    top: 24px;
-
-    background: transparent;
-}
-
-.navbar.compact .nav-inner {
-    max-width: 900px;
-
-    padding: 1.15rem 3.5rem;
-
-    border-radius: 999px;
-
-    background: rgba(23, 28, 30, 0.98);
-}
-
-.navbar.compact .logo img {
-    height: 56px;
-}
-
-.navbar.compact .nav-links {
-    gap: 2.4rem;
 }
 
 .hero {
