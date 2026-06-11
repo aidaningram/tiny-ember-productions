@@ -198,7 +198,7 @@
             Ready to start a project? Fill out the form below and I’ll get back to you soon.
         </p>
     
-        <form class="contact-form" action="https://formspree.io/f/mpqejgzk" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/mpqejgzk" method="POST">
     
             <div class="form-row">
                 <input type="text" name="first-name" placeholder="First Name" required>
@@ -238,6 +238,8 @@
                 required></textarea>
     
             <button type="submit" class="form-button">Send Message</button>
+
+            <p id="form-status" class="form-status"></p>
     
         </form>
     
