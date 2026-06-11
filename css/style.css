@@ -330,6 +330,22 @@ footer {
         font-size: 0.85rem;
     }
 
+    .navbar.compact .nav-inner {
+        max-width: 95vw;
+    
+        padding: 1rem 1.5rem;
+    }
+    
+    .navbar.compact .nav-links {
+        gap: 0.75rem;
+    
+        flex-wrap: nowrap;
+    }
+    
+    .navbar.compact .nav-links a {
+        font-size: 0.8rem;
+    }
+
     .hero-content h1 {
         font-size: 2.8rem;
     }
