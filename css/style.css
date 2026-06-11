@@ -577,4 +577,18 @@ footer {
     .featured {
         transform: none;
     }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-contact {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 }
