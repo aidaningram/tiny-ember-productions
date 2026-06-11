@@ -441,6 +441,7 @@ footer {
     flex-wrap: wrap;
 }
 
+.footer-link,
 .footer-instagram {
     display: flex;
     align-items: center;
@@ -450,6 +451,21 @@ footer {
     text-decoration: none;
 
     transition: color 0.3s ease;
+}
+
+.footer-link:visited,
+.footer-instagram:visited {
+    color: var(--text);
+}
+
+.footer-link:hover,
+.footer-instagram:hover {
+    color: var(--accent);
+}
+
+.footer-link:active,
+.footer-instagram:active {
+    color: var(--accent);
 }
 
 .footer-instagram:hover {
