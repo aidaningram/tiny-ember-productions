@@ -24,41 +24,83 @@ body {
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1.5rem 5%;
-    background: rgba(23, 28, 30, 0.9);
-
     position: fixed;
-    top: 0;
+    top: 24px;
     left: 0;
+
     width: 100%;
+
+    display: flex;
+    justify-content: center;
 
     z-index: 1000;
 
-    transition: transform 0.35s ease;
+    pointer-events: none;
 }
 
-.navbar.hidden {
-    transform: translateY(-100%);
+.nav-inner {
+    width: 90%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.2rem 2rem;
+
+    background: rgba(23, 28, 30, 0.9);
+    border-radius: 0;
+
+    transition:
+        width 0.45s ease,
+        padding 0.45s ease,
+        border-radius 0.45s ease,
+        background 0.45s ease,
+        transform 0.45s ease;
+
+    pointer-events: auto;
+}
+
+.navbar.compact .nav-inner {
+    width: fit-content;
+
+    padding: 0.75rem 1.4rem;
+
+    border-radius: 999px;
+
+    background: rgba(23, 28, 30, 0.92);
+
+    gap: 1.5rem;
 }
 
 .logo img {
     height: 70px;
 
-    transition: transform 0.3s ease;
+    display: block;
+
+    transition:
+        height 0.45s ease,
+        transform 0.3s ease;
 }
 
 .logo img:hover {
     transform: scale(1.05);
 }
 
+.navbar.compact .logo img {
+    height: 42px;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+
+    transition: gap 0.45s ease;
+}
+
+.navbar.compact .nav-links {
+    gap: 1.2rem;
 }
 
 .nav-links a {
