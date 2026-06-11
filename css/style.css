@@ -441,6 +441,25 @@ footer {
     flex-wrap: wrap;
 }
 
+.footer-instagram {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--text);
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-instagram:hover {
+    color: var(--accent);
+}
+
+.footer-instagram svg {
+    flex-shrink: 0;
+}
+
 .menu-toggle {
     display: none;
 }
