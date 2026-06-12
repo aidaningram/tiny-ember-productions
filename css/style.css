@@ -492,6 +492,39 @@ footer {
     position: relative;
 }
 
+@keyframes emberGlowSoft {
+    0%, 100% {
+        box-shadow:
+            0 0 10px rgba(234, 103, 25, 0.25),
+            0 0 22px rgba(245, 169, 66, 0.12);
+    }
+
+    50% {
+        box-shadow:
+            0 0 16px rgba(234, 103, 25, 0.42),
+            0 0 34px rgba(245, 169, 66, 0.22);
+    }
+}
+
+.cta-button,
+.featured,
+.form-button {
+    animation: emberGlowSoft 8s ease-in-out infinite;
+}
+
+.cta-button,
+.form-button {
+    box-shadow:
+        0 0 10px rgba(234, 103, 25, 0.25),
+        0 0 22px rgba(245, 169, 66, 0.12);
+}
+
+.featured {
+    box-shadow:
+        0 0 12px rgba(234, 103, 25, 0.22),
+        0 0 28px rgba(245, 169, 66, 0.12);
+}
+
 /* Phone layout */
 @media (max-width: 768px) {
 
