@@ -530,6 +530,60 @@ footer {
         box-shadow 0.4s ease;
 }
 
+.nav-inner {
+    position: relative;
+}
+
+.navbar.island-active .nav-inner::before {
+    content: "";
+
+    position: absolute;
+    inset: -8px;
+
+    border-radius: inherit;
+
+    background:
+        radial-gradient(circle at 20% 40%,
+            rgba(245, 169, 66, 0.45),
+            transparent 35%),
+
+        radial-gradient(circle at 80% 60%,
+            rgba(234, 103, 25, 0.35),
+            transparent 40%),
+
+        radial-gradient(circle at 50% 100%,
+            rgba(234, 103, 25, 0.25),
+            transparent 45%);
+
+    filter: blur(14px);
+
+    opacity: 0.75;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    animation: emberHaze 4s ease-in-out infinite;
+}
+
+@keyframes emberHaze {
+
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.55;
+    }
+
+    35% {
+        transform: scale(1.03);
+        opacity: 0.85;
+    }
+
+    65% {
+        transform: scale(0.98);
+        opacity: 0.65;
+    }
+}
+
 /* Phone layout */
 @media (max-width: 768px) {
 
