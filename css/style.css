@@ -563,7 +563,7 @@ footer {
 
     pointer-events: none;
 
-    animation: emberHaze 4s ease-in-out infinite;
+    animation: emberHaze 8s ease-in-out infinite;
 }
 
 @keyframes emberHaze {
