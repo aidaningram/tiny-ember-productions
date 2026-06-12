@@ -509,6 +509,15 @@ footer {
     position: relative;
 }
 
+.intro h2,
+.services h2,
+.packages h2,
+.contact h2 {
+    text-shadow:
+        0 0 5px rgba(245, 169, 66, 0.25),
+        0 0 12px rgba(234, 103, 25, 0.12);
+}
+
 @keyframes emberGlowSoft {
     0%, 100% {
         box-shadow:
