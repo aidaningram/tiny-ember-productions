@@ -166,6 +166,75 @@ body {
     background: var(--accent-light);
 }
 
+.about-section {
+    min-height: 100vh;
+
+    padding: 120px 10%;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--primary);
+}
+
+.about-content {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+
+    align-items: center;
+}
+
+.about-text h2 {
+    color: var(--accent-light);
+
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+
+    text-shadow:
+        0 0 5px rgba(245, 169, 66, 0.25),
+        0 0 12px rgba(234, 103, 25, 0.12);
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+
+    font-family: "Lexend", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-photo-placeholder {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(234, 103, 25, 0.18),
+            rgba(60, 62, 60, 0.9)
+        );
+
+    border: 1px solid rgba(234, 218, 195, 0.14);
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 14px rgba(234, 103, 25, 0.18),
+        0 0 34px rgba(245, 169, 66, 0.10);
+}
+
+.about-photo-placeholder span {
+    font-family: "Lexend", sans-serif;
+    color: rgba(234, 218, 195, 0.65);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .intro,
 .services,
 .contact {
