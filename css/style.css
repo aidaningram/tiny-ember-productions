@@ -198,6 +198,15 @@ body {
         0 0 12px rgba(234, 103, 25, 0.12);
 }
 
+.about-name {
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    margin-bottom: 2rem;
+
+    color: var(--text);
+}
+
 .about-text p {
     margin-bottom: 1.5rem;
 
