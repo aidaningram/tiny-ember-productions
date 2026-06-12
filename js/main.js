@@ -20,12 +20,6 @@ function updateNavbar() {
 
     const eased = 1 - Math.pow(1 - progress, 3);
 
-    if (progress > 0.65) {
-        navbar.classList.add("island-active");
-    } else {
-        navbar.classList.remove("island-active");
-    }
-
     navbar.style.top = `${eased * 24}px`;
     navbar.style.background = `rgba(23, 28, 30, ${0.96 - eased * 0.96})`;
 
