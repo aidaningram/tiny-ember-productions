@@ -839,11 +839,17 @@ footer {
     .site-footer {
         flex-direction: column;
         text-align: center;
+        gap: 0.75rem;
     }
     
     .footer-contact {
-        flex-direction: column;
-        gap: 0.75rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        gap: 1rem;
+    
+        flex-wrap: nowrap;
     }
 
     .about-section {
