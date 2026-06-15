@@ -661,6 +661,33 @@ footer {
         0 0 28px rgba(245, 169, 66, 0.12);
 }
 
+@media (max-width: 1200px) {
+
+    .package-grid {
+        gap: 1rem;
+    }
+
+    .package-card {
+        padding: 1.75rem;
+    }
+
+    .package-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .package-card li {
+        font-size: 0.92rem;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-name {
+        font-size: 2.3rem;
+    }
+}
+
 /* Phone layout */
 @media (max-width: 768px) {
 
