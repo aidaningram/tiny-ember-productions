@@ -88,14 +88,21 @@
 
                 <div class="video-grid video-grid-wide">
                     <!--
-                    To add a brand film, duplicate this card and replace the src, poster, title,
-                    and description.
+                    To add a brand film from Google Drive:
+                    1. Open the video in Drive.
+                    2. Copy the file ID from the share URL.
+                    3. Replace YOUR_GOOGLE_DRIVE_FILE_ID with that ID.
+                    4. Keep the iframe src in this /preview format so the video plays here
+                       without showing a separate Google Drive link.
 
                     <div class="video-card">
                         <div class="video-frame">
-                            <video controls preload="metadata" poster="assets/images/project-poster.jpg">
-                                <source src="assets/videos/project-video.mp4" type="video/mp4">
-                            </video>
+                            <iframe
+                                src="https://drive.google.com/file/d/YOUR_GOOGLE_DRIVE_FILE_ID/preview"
+                                title="Project Title"
+                                allow="autoplay; fullscreen"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                         <h4>Project Title</h4>
                         <p>Short project description.</p>
@@ -120,14 +127,21 @@
 
                 <div class="video-grid video-grid-vertical">
                     <!--
-                    To add a vertical video, duplicate this card and replace the src, poster, title,
-                    and description.
+                    To add a vertical video from Google Drive:
+                    1. Open the video in Drive.
+                    2. Copy the file ID from the share URL.
+                    3. Replace YOUR_GOOGLE_DRIVE_FILE_ID with that ID.
+                    4. Keep the iframe src in this /preview format so the video plays here
+                       without showing a separate Google Drive link.
 
                     <div class="video-card">
                         <div class="video-frame vertical-frame">
-                            <video controls preload="metadata" poster="assets/images/vertical-poster.jpg">
-                                <source src="assets/videos/vertical-video.mp4" type="video/mp4">
-                            </video>
+                            <iframe
+                                src="https://drive.google.com/file/d/YOUR_GOOGLE_DRIVE_FILE_ID/preview"
+                                title="Project Title"
+                                allow="autoplay; fullscreen"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                         <h4>Project Title</h4>
                         <p>Short project description.</p>
