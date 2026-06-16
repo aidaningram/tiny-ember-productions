@@ -190,11 +190,8 @@ body {
     color: var(--accent-light);
 
     font-size: 2.7rem;
-    margin-bottom: 0.75rem;
 
-    text-shadow:
-        0 0 5px rgba(245, 169, 66, 0.25),
-        0 0 12px rgba(234, 103, 25, 0.12);
+    margin-bottom: 0.75rem;
 }
 
 .about-name {
