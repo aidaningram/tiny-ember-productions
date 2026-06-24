@@ -3,6 +3,41 @@ const navInner = document.querySelector(".nav-inner");
 const logoImg = document.querySelector(".logo img");
 const navLinks = document.querySelector(".nav-links");
 const menuToggle = document.querySelector(".menu-toggle");
+const themeToggle = document.querySelector(".theme-toggle");
+const savedTheme = localStorage.getItem("tinyEmberTheme");
+
+if (savedTheme === "light") {
+    document.documentElement.dataset.theme = "light";
+}
+
+function isLightTheme() {
+    return document.documentElement.dataset.theme === "light";
+}
+
+function updateThemeToggle() {
+    if (!themeToggle) {
+        return;
+    }
+
+    themeToggle.setAttribute(
+        "aria-label",
+        isLightTheme() ? "Switch to dark mode" : "Switch to light mode"
+    );
+}
+
+function getNavbarColors() {
+    if (isLightTheme()) {
+        return {
+            fade: "238, 240, 242",
+            solid: "238, 240, 242"
+        };
+    }
+
+    return {
+        fade: "23, 28, 30",
+        solid: "23, 28, 30"
+    };
+}
 
 function updateNavbar() {
     if (window.innerWidth <= 768) {
@@ -19,14 +54,15 @@ function updateNavbar() {
     progress = Math.min(Math.max(progress, 0), 1);
 
     const eased = 1 - Math.pow(1 - progress, 3);
+    const colors = getNavbarColors();
 
     navbar.style.top = `${eased * 24}px`;
-    navbar.style.background = `rgba(23, 28, 30, ${0.96 - eased * 0.96})`;
+    navbar.style.background = `rgba(${colors.fade}, ${0.96 - eased * 0.96})`;
 
     navInner.style.maxWidth = `${100 - eased * 32}%`;
     navInner.style.padding = `${1.5 - eased * 0.35}rem ${5 - eased * 1.5}%`;
     navInner.style.borderRadius = `${eased * 999}px`;
-    navInner.style.background = `rgba(23, 28, 30, ${0.96 + eased * 0.02})`;
+    navInner.style.background = `rgba(${colors.solid}, ${0.96 + eased * 0.02})`;
 
     logoImg.style.height = `${70 - eased * 14}px`;
     navLinks.style.gap = `${2 + eased * 0.4}rem`;
@@ -51,6 +87,23 @@ if (menuToggle && navLinks) {
     });
 }
 
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        const nextTheme = isLightTheme() ? "dark" : "light";
+
+        if (nextTheme === "light") {
+            document.documentElement.dataset.theme = "light";
+        } else {
+            delete document.documentElement.dataset.theme;
+        }
+
+        localStorage.setItem("tinyEmberTheme", nextTheme);
+        updateThemeToggle();
+        updateNavbar();
+    });
+}
+
+updateThemeToggle();
 updateNavbar();
 
 const contactForm = document.getElementById("contact-form");

@@ -13,7 +13,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <script>
+        if (localStorage.getItem("tinyEmberTheme") === "light") {
+            document.documentElement.dataset.theme = "light";
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 
 <body>
@@ -28,18 +34,50 @@
                     </a>
                 </div>
         
-                <button class="menu-toggle" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-        
                 <ul class="nav-links">
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#packages">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+
+                <div class="nav-actions">
+                    <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+                        <svg
+                            class="theme-lamp"
+                            viewBox="0 0 80 88"
+                            aria-hidden="true"
+                            focusable="false">
+                            <path class="lamp-ring" d="M30 16C30 4 50 4 50 16C50 20 48 23 45 25H35C32 23 30 20 30 16Z"></path>
+                            <path class="lamp-cap" d="M20 30C25 24 32 22 40 22C48 22 55 24 60 30H20Z"></path>
+                            <path class="lamp-vent-box" d="M27 31H36V38H27Z"></path>
+                            <path class="lamp-vent-box" d="M37 31H47V38H37Z"></path>
+                            <path class="lamp-vent-box" d="M48 31H57V38H48Z"></path>
+                            <path class="lamp-neck" d="M26 39H54V49H26Z"></path>
+                            <path class="lamp-rail lamp-rail-left" d="M26 41C15 43 14 54 13 65C12 77 20 82 31 78"></path>
+                            <path class="lamp-rail lamp-rail-right" d="M54 41C65 43 66 54 67 65C68 77 60 82 49 78"></path>
+                            <path class="lamp-glass" d="M26 49C23 59 21 74 31 78H49C59 74 57 59 54 49H26Z"></path>
+                            <path class="lamp-cross" d="M28 62L52 77"></path>
+                            <path class="lamp-cross" d="M52 62L28 77"></path>
+                            <path class="lamp-burner" d="M30 78H50L53 83H27L30 78Z"></path>
+                            <path class="lamp-base" d="M24 83H56L60 87H20L24 83Z"></path>
+                            <path
+                                class="lamp-flame"
+                                d="M40 76C35.4 73.5 34 69.6 36 65.8C37 63.8 38.8 62.2 41.1 59.8C41.4 63.1 44.8 65.2 45.2 68.8C45.6 72.3 43.6 75 40 76Z">
+                            </path>
+                            <path
+                                class="lamp-flame-core"
+                                d="M40 73.5C38 72.2 37.7 70.4 38.7 68.5C39.2 67.4 40.2 66.5 41.2 65.5C41.5 67.7 42.8 69 42.9 70.7C43 72.2 41.8 73.2 40 73.5Z">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button class="menu-toggle" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
         
             </div>
         </nav>
